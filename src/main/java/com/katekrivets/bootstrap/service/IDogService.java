@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IDogService {
     List<Dog> retrieveDogs();
-//    List<String> retrieveDogBreed();
-//    List<String> retrieveDogNames();
-//    String retrieveDogBreedById(Long id);
+    List<String> retrieveDogBreed();
+    List<String> retrieveDogNames();
+    String retrieveDogBreedById(Long id);
 }

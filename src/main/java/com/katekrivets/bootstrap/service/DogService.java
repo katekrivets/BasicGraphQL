@@ -18,19 +18,19 @@ public class DogService implements IDogService {
         return (List<Dog>) dogRepository.findAll();
     }
 
-//    public List<String> retrieveDogBreed() {
-//        return (List<String>) dogRepository.findAllBreed();
-//    }
+    public List<String> retrieveDogBreed() {
+        return (List<String>) dogRepository.findAllBreed();
+    }
 
-//    @Override
-//    public List<String> retrieveDogNames() {
-//        return (List<OptionalString>) dogRepository.findAllName();
-//    }
+    @Override
+    public List<String> retrieveDogNames() {
+        return dogRepository.findAllName();
+    }
 
-//    @Override
-//    public String retrieveDogBreedById(Long id) {
-//        Optional<String> optionalBreed = Optional.ofNullable(dogRepository.findDogBreedById(id));
-//        return optionalBreed.orElseThrow(DogNotFoundException::new);
-//    }
+    @Override
+    public String retrieveDogBreedById(Long id) {
+        Optional<String> optionalBreed = Optional.ofNullable(dogRepository.findDogBreedById(id));
+        return optionalBreed.orElseThrow(DogNotFoundException::new);
+    }
 
 }
