@@ -34,6 +34,12 @@ public class DogController {
         return new ResponseEntity<List<Dog>>(list, HttpStatus.OK);
     }
 
+    @GetMapping("/dogs/{id}")
+    public ResponseEntity<Dog> getDog(@PathVariable Long id) {
+        Dog dog = dogService.retrieveDogById(id);
+        return new ResponseEntity<Dog>(dog, HttpStatus.OK);
+    }
+
     @GetMapping("/dogs/name")
     public ResponseEntity<List<String>> getDogNames() {
         List<String> listName = dogService.retrieveDogNames();

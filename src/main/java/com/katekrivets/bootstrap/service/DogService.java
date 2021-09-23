@@ -33,4 +33,10 @@ public class DogService implements IDogService {
         return optionalBreed.orElseThrow(DogNotFoundException::new);
     }
 
+    @Override
+    public Dog retrieveDogById(Long id) {
+        Optional<Dog> optionalDog = dogRepository.findById(id);
+        return optionalDog.orElseThrow(DogNotFoundException::new);
+    }
+
 }

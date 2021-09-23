@@ -9,4 +9,5 @@ public interface IDogService {
     List<String> retrieveDogBreed();
     List<String> retrieveDogNames();
     String retrieveDogBreedById(Long id);
+    Dog retrieveDogById(Long id);
 }
